@@ -12,24 +12,19 @@ It can be a bit overwhelming for people with poor eyesight or colorblindness - t
 [OCB Custom Textures Core Mod](https://github.com/OCB7D2D/OcbCustomTextures/tree/develop)
 	Note: this is the Dev-Branch (at this date: us 7/10/23)
 
-## OCB More Flowers and Plants (A20)
-	(https://www.nexusmods.com/7daystodie/mods/2789)
+[OCB More Flowers and Plants (A20)](https://www.nexusmods.com/7daystodie/mods/2789)
 	still works fine
 
 
 ## Highly recommended:
 
-## OCB Crooked Deco (A21)
-	(https://www.nexusmods.com/7daystodie/mods/2096)
+[OCB Crooked Deco (A21)](https://www.nexusmods.com/7daystodie/mods/2096)
 
-## OCB Pretty Grass (A21)
-	(https://community.7daystodie.com/topic/26974-a21-npcmod-and-addons/)
+[OCB Pretty Grass (A21)](https://community.7daystodie.com/topic/26974-a21-npcmod-and-addons/)
 
-## OCB Better Terrain Shader (A21)
-	(https://www.nexusmods.com/7daystodie/mods/2873)
+[OCB Better Terrain Shader (A21)](https://www.nexusmods.com/7daystodie/mods/2873)
 
-## For even more immersion get the Birds Pack from NPCMod:
-	(https://community.7daystodie.com/topic/26974-a21-npcmod-and-addons/)
+## For even more immersion get the Birds Pack from [NPCMod](https://community.7daystodie.com/topic/26974-a21-npcmod-and-addons/)
 	SCore
 	NPCCore
 	1-NPCXBirdPack
