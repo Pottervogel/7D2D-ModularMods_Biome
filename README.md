@@ -5,7 +5,7 @@ Changes to Vanilla Biomes
 is actually an addon to OCBMaurices Custom Textures Plant Mod for i bit more organic look
 
 ## z_MM_Biomes_Plants Birches / Maples
-wakes up the old Vanilla Trees from der slumber
+wakes up the old Vanilla Trees from their slumber
 they are not very good looking, but beauty lies in the eyes of the beholder
 
 ## z_MM_Biomes_Roads_no_Decals
