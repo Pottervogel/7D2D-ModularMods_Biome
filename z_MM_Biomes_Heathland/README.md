@@ -9,8 +9,7 @@ It can be a bit overwhelming for people with poor eyesight or colorblindness - t
 ## Those Mods are required: 
 
 
-## OCB Custom Textures Core Mod
-    [(https://github.com/OCB7D2D/OcbCustomTextures/tree/develop)]
+[OCB Custom Textures Core Mod](https://github.com/OCB7D2D/OcbCustomTextures/tree/develop)
 	Note: this is the Dev-Branch (at this date: us 7/10/23)
 
 ## OCB More Flowers and Plants (A20)
