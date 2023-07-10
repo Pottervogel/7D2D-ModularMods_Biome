@@ -1,0 +1,289 @@
+<config>	
+	<remove xpath="/worldgeneration/biomes/biome[@name='pine_forest']"/>
+	<insertAfter xpath="/worldgeneration/biomes/biome[@name='snow']">
+	<!-- *** Pine Forest: Main Biome -->
+	<biome name="pine_forest" topsoil_block="terrForestGround" biomemapcolor="#004000" lootstage_modifier = "0" lootstage_bonus="0" gamestage_modifier="0" gamestage_bonus="0" difficulty="1">
+
+		<weather name="default" prob="95"> <!-- default is 83 -->
+			<Temperature min="65" max="70" prob="1"/> <!-- default is  -->
+			<CloudThickness min="0" max="0" prob="85"/> <!-- default is 35 -->
+			<CloudThickness min="10" max="70" prob="15"/> <!-- default is 65 -->
+			<Precipitation min="0" max="0" prob="1"/>
+			<Fog min="0.5" max="0.8" prob="1"/> 
+			<!--<Fog min="0" max="2" prob="1"/>-->
+			<Wind min="3" max="22" prob="1"/> <!-- default:   -->
+		</weather>
+		<weather name="fog" prob="2"> <!-- default:   -->
+			<Temperature min="60" max="65" prob="1"/>
+			<!--<Temperature min="65" max="70" prob="1"/>-->
+			<CloudThickness min="15" max="35" prob="1"/>
+			<!--<CloudThickness min="35" max="70" prob="1"/>-->
+			<Precipitation min="0" max="0" prob="1"/>
+			<Fog min="8" max="13" prob="1"/>
+			<!--<Fog min="16" max="27" prob="1"/>-->
+			<Wind min="2" max="5" prob="1"/>
+		</weather>
+		<weather name="rain" prob="2"> <!-- default: 7  -->
+			<Temperature min="60" max="65" prob="1"/>
+			<!--<Temperature min="65" max="70" prob="1"/>-->
+			<CloudThickness min="70" max="90" prob="1"/>
+			<Precipitation min="30" max="80" prob="1"/>
+			<Fog min="1" max="3" prob="1"/>
+			<Wind min="10" max="25" prob="1"/>
+			<spectrum name="Rainy"/>
+		</weather>
+
+		<weather name="storm" prob="1"> <!-- default is 3 -->
+			<Temperature min="55" max="60" prob="1"/>
+			<!--<Temperature min="65" max="70" prob="1"/>-->
+			<CloudThickness min="90" max="100" prob="1"/>
+			<Precipitation min="90" max="100" prob="1"/>
+			<Fog min="2" max="5" prob="1"/>
+			<!--<Fog min="2" max="8" prob="1"/>-->
+			<Wind min="35" max="40" prob="1"/>
+			<spectrum name="Stormy"/>
+		</weather>
+		<weather name="bloodMoon" prob="0">
+			<Temperature min="60" max="60" prob="1"/>
+			<CloudThickness min="50" max="50" prob="1"/>
+			<Precipitation min="0" max="0" prob="1"/>
+			<Fog min="7" max="7" prob="1"/>
+			<Wind min="15" max="20" prob="1"/>
+		</weather>
+		<weather name="twitch_fog" buff="twitch_fog" prob="0">
+			<Temperature min="65" max="70" prob="1"/>
+			<CloudThickness min="35" max="70" prob="1"/>
+			<Precipitation min="0" max="0" prob="1"/>
+			<Fog min="35" max="45" prob="1"/>
+			<Wind min="2" max="5" prob="1"/>
+		</weather>
+		<weather name="twitch_rain" buff="twitch_rain" prob="0">
+			<Temperature min="65" max="70" prob="1"/>
+			<CloudThickness min="70" max="90" prob="1"/>
+			<Precipitation min="30" max="80" prob="1"/>
+			<Fog min="1" max="3" prob="1"/>
+			<Wind min="10" max="25" prob="1"/>
+			<spectrum name="Rainy"/>
+		</weather>
+		<weather name="twitch_snow" buff="twitch_snow" prob="0">
+			<Temperature min="18" max="28" prob="1"/>
+			<CloudThickness min="55" max="75" prob="1"/>
+			<Precipitation min="30" max="60" prob="1"/>
+			<Fog min="1" max="5" prob="1"/>
+			<Wind min="18" max="25" prob="1"/>
+			<spectrum name="Snowy"/>
+		</weather>
+		<weather name="twitch_storm" buff="twitch_storm" prob="0">
+			<Temperature min="65" max="70" prob="1"/>
+			<CloudThickness min="90" max="100" prob="1"/>
+			<Precipitation min="90" max="100" prob="1"/>
+			<Fog min="2" max="8" prob="1"/>
+			<Wind min="35" max="40" prob="1"/>
+			<spectrum name="Stormy"/>
+		</weather>
+
+		<!-- *** Pine Forest: Sub Biome: Heavy Short Grass -->
+		<subbiome prob="0.27">
+			<layers>
+				<layer depth="1" blockname="terrForestGround"/>
+				<layer depth="3" blockname="terrDirt"/>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="deco_iron_vein" checkresource="-7" onslopes="true" prob=".004" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource" prob=".002" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource02" prob=".002" rotatemax="3"/>
+				<decoration type="block" blockname="rock01" prob=".005"/>
+				<decoration type="block" blockname="rock02" prob=".005"/>
+				<!--decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/-->
+				<decoration type="block" blockname="plantShrub" prob="0.01" rotatemax="7"/>
+				<decoration type="block" blockname="treeTallGrassDiagonal" prob=".5"/>
+				<decoration type="block" blockname="treeShortGrass" prob=".95"/>
+			</decorations>
+		</subbiome>
+
+		<!-- *** Pine Forest: Sub Biome: Meadows Clustered Flowers and Boulders -->
+		<!-- *** Pine Forest: Sub Biome: Clustered Flowers and Boulders -->
+		<subbiome name="meadows" prob="0.31">
+			<layers>
+				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
+				<layer depth="*" blockname="terrStone">
+					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
+					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+				</layer>
+				<layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="deco_iron_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="rock01" prob=".01"/>
+				<decoration type="block" blockname="rock02" prob=".01"/>
+				<!-- blumen, sträucher, gras -->
+				<decoration type="block" blockname="treeStump" prob=".0001" rotatemax="7"/>
+				<decoration type="block" blockname="treeAzalea" prob=".001" rotatemax="7"/>
+				<!-- vanilla goldenrod -->
+				<decoration type="block" blockname="plantedGoldenrod3Harvest" prob="0.1" rotatemax="7"/>
+				<!-- NEED Ocb_Plants_Flowers mod -->
+				<!-- yellow flowers -->
+				<decoration type="block" blockname="ocb_block_flower_07" prob="0.3" rotatemax="7"/>
+				<!-- white flowers -->
+				<decoration type="block" blockname="ocb_block_flower_06" prob="0.3" rotatemax="7"/>
+				<decoration type="block" blockname="ocb_block_flower_09" prob="0.3" rotatemax="7"/>
+				<decoration type="block" blockname="treePlainsTree" prob=".2"/>
+				<decoration type="block" blockname="treeTallGrassDiagonal" prob=".3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".2"/>
+				<decoration type="block" blockname="treeShortGrass" prob=".2"/>
+			</decorations>
+		</subbiome>
+
+		<!-- *** Pine Forest: Ore Sub Biome: coalOre -->
+		<!-- *** Pine Forest: Sub Biome: coalOre -->
+		<subbiome name="yellow" prob="0.392">
+			
+			<layers>
+				<layer depth="1" blockname="terrForestGround"/> 
+				<layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/>
+				<decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
+				<decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/>
+				<decoration type="block" blockname="rock01" prob=".001"/>
+				<decoration type="block" blockname="rock02" prob=".001"/>
+				<decoration type="block" blockname="cntBirdnest" prob="0.001"/>
+				<decoration type="block" blockname="treeStump" prob=".0001" rotatemax="7"/>
+				<decoration type="block" blockname="plantedCotton3Harvest" prob="0.1" rotatemax="7"/>
+				<decoration type="block" blockname="plantShrub" prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="plantShrubDead" prob="0.002" rotatemax="7"/>
+				<decoration type="block" blockname="treeTallGrassDiagonal" prob=".3"/>
+				<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".01"/>
+				<decoration type="block" blockname="ocb_block_flower_07" prob="0.3" rotatemax="7"/>
+				<decoration type="block" blockname="ocb_block_flower_06" prob="0.3" rotatemax="7"/>
+				<decoration type="block" blockname="ocb_block_flower_09" prob="0.3" rotatemax="7"/>
+				<!-- for swamp patches -->
+				<!--decoration type="block" blockname="water" onslopes="false" prob=".5"/-->			
+			</decorations>
+		</subbiome>
+
+		<!-- *** Pine Forest: Ore Sub Biome: potassiumNitrate -->
+		<!-- *** Pine Forest: Conifer and potassiumNitrate Sub Biome -->
+		<subbiome name="purple" prob="0.412">
+			<layers>
+				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/>
+				<decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
+				<decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/>
+				<decoration type="block" blockname="rock01" prob=".001"/>
+				<decoration type="block" blockname="rock02" prob=".001"/>
+				<decoration type="block" blockname="cntBirdnest" prob="0.001"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" prob="0.05" rotatemax="7"/>
+				<decoration type="block" blockname="treeJuniper4m" prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="treeStump" prob=".0001" rotatemax="7"/>
+				<!-- shrubs, purple flowers -->
+				<decoration type="block" blockname="treeDesertShrub" prob=".05"/>
+				<decoration type="block" blockname="plantedBlueberry3Harvest" prob="0.05" rotatemax="7" />
+				<decoration type="block" blockname="forestFlower" prob="0.3" rotatemax="7"/><!-- vanilla purple flower -->
+				<decoration type="block" blockname="ocb_block_flower_01" prob="0.1" rotatemax="7"/>
+				<decoration type="block" blockname="ocb_block_flower_05" prob="0.1" rotatemax="7"/>
+				<decoration type="block" blockname="ocb_block_onion_grown" prob=".1"/>
+				<decoration type="block" blockname="plantShrub" prob="0.01" rotatemax="7"/>
+				<decoration type="block" blockname="treeTallGrassDiagonal" prob=".1"/>
+
+			</decorations>
+		</subbiome>
+
+		<!-- *** Pine Forest: Ore Sub Biome: leadOre -->
+		<subbiome name="pink" prob="0.442">
+			<layers>
+				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
+				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+			</layers>
+			<decorations>
+				<decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
+				<decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/>
+				<decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
+				<decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/>
+				<decoration type="block" blockname="rock01" prob=".001"/>
+				<decoration type="block" blockname="rock02" prob=".001"/>
+				<decoration type="block" blockname="cntBirdnest" prob="0.0005"/>
+				<decoration type="block" blockname="treeDeadPineLeaf" prob="0.04" rotatemax="7"/>
+				<decoration type="block" blockname="treeOakMed01" prob="0.01" rotatemax="7"/>
+				<decoration type="block" blockname="treeOakMed02" prob="0.01" rotatemax="7"/>
+				<decoration type="block" blockname="treeOakSml01" prob="0.01" rotatemax="7"/>
+				<decoration type="block" blockname="treeAzalea" prob=".001" rotatemax="7"/>
+				<decoration type="block" blockname="plantShrub" prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="plantShrubDead" prob="0.001" rotatemax="7"/>
+				<decoration type="block" blockname="treeStump" prob=".0001" rotatemax="7"/>
+				<decoration type="block" blockname="plantedChrysanthemum3Harvest" prob="0.1" rotatemax="7"/><!-- vanilla chrysanthemum -->
+				<!-- NEED Ocb_Plants_Flowers mod -->
+				<decoration type="block" blockname="ocb_block_flower_02" prob="0.3" rotatemax="7"/><!-- OCB pink flowers -->
+				<decoration type="block" blockname="ocb_block_flower_04" prob="0.3" rotatemax="7"/><!-- OCB pink flowers -->
+				<decoration type="block" blockname="ocb_block_flower_08" prob="0.3" rotatemax="7"/><!-- OCB pink flowers -->
+				<decoration type="block" blockname="ocb_block_flower_05" prob="0.3" rotatemax="7"/><!-- OCB purple flowers -->
+				<decoration type="block" blockname="treeDeadTree02" prob=".007" rotatemax="7"/>
+				<!-- grass -->
+				<decoration type="block" blockname="treeTallGrassDiagonal" prob=".05"/>
+				<decoration type="block" blockname="treeShortGrass" prob=".08"/>
+			</decorations>
+		</subbiome>
+
+		<!-- *** Pine Forest 2 Heath: Block Layers -->
+		<layers>
+			<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
+			<layer depth="*" blockname="terrStone">
+				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
+				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
+			</layer>
+			<layer depth="3" blockname="terrBedrock"/>
+		</layers>
+
+		<!-- *** Pine Forest 2 Heath: Decorations Main  -->
+		<decorations>
+			<decoration type="prefab" name="deco_iron_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
+			<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
+			<decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/>
+			<decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/>
+			<decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/>
+			<decoration type="block" blockname="rock01" prob=".001"/>
+			<decoration type="block" blockname="rock02" prob=".001"/>
+			<decoration type="block" blockname="cntBirdnest" prob="0.001"/>
+			<decoration type="block" blockname="plantShrub" prob="0.001" rotatemax="7"/>
+			<decoration type="block" blockname="treeOakMed01" prob="0.001" rotatemax="7"/>
+			<decoration type="block" blockname="treeOakMed02" prob="0.001" rotatemax="7"/>
+			<decoration type="block" blockname="treeOakSml01" prob="0.001" rotatemax="7"/>
+			<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/>
+			<decoration type="block" blockname="treePlainsTree" prob=".01"/>
+			<!--decoration type="block" blockname="plantedSnowberry3Harvest" prob=".05"/-->
+			<decoration type="block" blockname="treeForestGrassDiagonal" prob=".5"/>
+			<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".1"/>
+			<decoration type="block" blockname="treeTallGrassDiagonal" prob=".3"/>
+			<decoration type="block" blockname="treeShortGrass" prob=".1"/>
+			<!-- *** NEED OCB_ -->
+			<decoration type="block" blockname="ocb_block_flower_06" prob="0.2" rotatemax="7"/>
+			<decoration type="block" blockname="ocb_block_flower_09" prob="0.3" rotatemax="7"/>
+			<decoration type="block" blockname="ocb_block_wheat_small" prob=".1"/>
+		</decorations>
+	</biome>
+	</insertAfter>
+</config>

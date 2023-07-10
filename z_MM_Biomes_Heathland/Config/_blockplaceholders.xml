@@ -1,0 +1,57 @@
+<config>
+	<append xpath="/blockplaceholders">
+
+		<placeholder name="MMStumpHelper">
+			<block name="treeStump" prob=".8"/>
+		</placeholder>
+
+		<placeholder name="MMShroomsHelper">
+			<block name="treeStump" prob=".008"/>
+			<block name="plantedMushroom3Harvest" prob=".8"/>
+			<block name="mushroom01" prob="1"/>
+			<block name="mushroom02" prob=".35"/>
+			<!--
+			<block name="Mushroom03" prob="1"/>
+			<block name="Mushroom04" prob="1"/>
+			<block name="Mushroom05" prob="1"/>
+			-->
+		</placeholder>
+
+		<placeholder name="MMDeadTreeRandomHelper">
+			<decoration type="block" blockname="treeDeadTree01" prob="1" randomrotation="true"/>
+			<decoration type="block" blockname="treeDeadTree02" prob="1" randomrotation="true"/>
+			<decoration type="block" blockname="treePlainsTree2" prob="1" randomrotation="true"/>
+		</placeholder>
+		<placeholder name="MMHeathTreeRandomHelper">
+			<decoration type="block" blockname="treeOakMed01" prob="1.0" randomrotation="true"/>
+			<decoration type="block" blockname="treeOakMed02" prob="1.0" randomrotation="true"/>
+			<decoration type="block" blockname="treeOakSml01" prob="1.0" randomrotation="true"/>
+		</placeholder>
+
+		<placeholder name="MMYellowPatchRandomHelper">
+			<decoration type="block" blockname="plantedCotton3Harvest" prob="0.5"/>
+			<decoration type="block" blockname="ocb_block_flower_06" prob="1.0"/>
+			<decoration type="block" blockname="ocb_block_flower_07" prob="1.0"/>
+			<decoration type="block" blockname="ocb_block_flower_08" prob="1.0"/>
+		</placeholder>
+		<placeholder name="MMPinkPatchRandomHelper">
+			<decoration type="block" blockname="treeDeadTree01" prob="1.0"/>
+			<decoration type="block" blockname="treeDeadTree02" prob="1.0"/>
+			<decoration type="block" blockname="treePlainsTree2" prob="1.0"/>
+		</placeholder>
+
+		<placeholder name="MMPurplePatchRandomHelper">
+			<decoration type="block" blockname="treeDeadTree01" prob="1.0"/>
+			<decoration type="block" blockname="treeDeadTree02" prob="1.0"/>
+			<decoration type="block" blockname="treePlainsTree2" prob="1.0"/>
+		</placeholder>
+		<placeholder name="MMWhitePatchRandomHelper">
+			<decoration type="block" blockname="treeDeadTree01" prob="1.0"/>
+			<decoration type="block" blockname="treeDeadTree02" prob="1.0"/>
+			<decoration type="block" blockname="treePlainsTree2" prob="1.0"/>
+		</placeholder>
+
+
+	</append>
+	
+</config>
