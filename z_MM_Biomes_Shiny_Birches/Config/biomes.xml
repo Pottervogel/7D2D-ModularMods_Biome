@@ -1,7 +1,0 @@
-<config>	
-	<append xpath="worldgeneration/biomes//biome[@name='pine_forest']/decorations">
-		<decoration type="block" blockname="treeBirch10m" prob="0.001" rotatemax="7"/>
-		<decoration type="block" blockname="treeBirch12m" prob="0.001" rotatemax="7"/>
-		<decoration type="block" blockname="treeBirch15m" prob="0.001" rotatemax="7"/>
-	</append>
-</config>
