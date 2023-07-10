@@ -2,7 +2,7 @@
 Changes to Vanilla Biomes
 
 ## z_MM_Biomes_Heathland
-is actually an addon to OCBMaurices Custom Textures Plant Mod for i bit more organic look
+is actually an addon to OCBMaurices Custom Textures Plant Mod for a bit more organic look
 
 ## z_MM_Biomes_Plants Birches / Maples
 wakes up the old Vanilla Trees from their slumber
