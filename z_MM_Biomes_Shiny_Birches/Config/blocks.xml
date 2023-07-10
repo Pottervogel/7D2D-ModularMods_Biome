@@ -1,0 +1,36 @@
+<config>
+	<append xpath="/blocks">
+		<block name="treeBirch10m">
+			<property name="Extends" value="treeMaster"/>
+			<property name="Model" value="@:Entities/Trees/Birch35Prefab.prefab"/>
+			<property name="ModelOffset" value="0,-0.3,0"/>
+			<property name="MultiBlockDim" value="1,7,1"/>
+			<property name="BigDecorationRadius" value="2"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="ParticleOnDeath" value="treeGib_birch_small"/>
+			<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+		</block>
+
+		<block name="treeBirch12m">
+			<property name="Extends" value="treeMaster"/>
+			<property name="Material" value="MtreeWoodMedium"/>
+			<property name="Model" value="@:Entities/Trees/Birch50Prefab.prefab"/>
+			<property name="ModelOffset" value="0,-0.3,0"/>
+			<property name="MultiBlockDim" value="1,4,1"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="ParticleOnDeath" value="treeGib_birch_small"/>
+			<drop event="Harvest" name="resourceWood" count="70" tag="oreWoodHarvest"/>
+		</block>
+
+		<block name="treeBirch15m">
+			<property name="Extends" value="treeMaster"/>
+			<property name="Material" value="MtreeWoodLarge"/>
+			<property name="Model" value="@:Entities/Trees/Birch55Prefab.prefab"/>
+			<property name="ModelOffset" value="0,-0.3,0"/>
+			<property name="MultiBlockDim" value="1,13,1"/>
+			<property name="BigDecorationRadius" value="4"/>
+			<property name="ParticleOnDeath" value="treeGib_birch"/>
+			<drop event="Harvest" name="resourceWood" count="110" tag="oreWoodHarvest"/>
+		</block>
+	</append>
+</config>
